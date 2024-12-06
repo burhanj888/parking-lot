@@ -1,12 +1,13 @@
 use std::collections::HashMap;
 
+/// Parking Spot Type
 #[derive(Debug, PartialEq, Eq, Hash)]
 enum SpotType {
     Motorcycle,
     Car,
     Large,
 }
-
+/// Vehicle Type
 #[derive(Debug, PartialEq)]
 enum VehicleType {
     Motorcycle,
@@ -14,12 +15,14 @@ enum VehicleType {
     Van,
 }
 
+/// Individual Parking Spot
 #[derive(Debug)]
 struct ParkingSpot {
     spot_type: SpotType,
     is_occupied: bool,
 }
 
+/// Parking Lot
 #[derive(Debug)]
 struct ParkingLot {
     spots: Vec<ParkingSpot>,
